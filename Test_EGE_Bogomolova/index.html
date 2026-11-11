@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по информатике — ЕГЭ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">Практическая работа · HTML, CSS и JavaScript</p>
+            <h1>Тест по информатике</h1>
+            <p class="subtitle">Тренировка заданий в формате ЕГЭ</p>
+        </header>
+
+        <section class="card">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Основная часть</p>
+                    <h2>Задание 1</h2>
+                </div>
+                <span class="badge">1 вопрос</span>
+            </div>
+
+            <table class="task" id="q1">
+                <tr>
+                    <th colspan="2">Условие задания</th>
+                </tr>
+                <tr>
+                    <td class="task-number" rowspan="2">1</td>
+                    <td>
+                        Автоматическое устройство осуществило перекодировку
+                        информационного сообщения на русском языке, первоначально
+                        записанного в 16-битном коде Unicode, в 8-битную кодировку
+                        КОИ-8. При этом информационное сообщение уменьшилось на
+                        480 бит. Какова длина сообщения в символах?
+                    </td>
+                </tr>
+                <tr>
+                    <td class="answer-cell">
+                        <label for="a1">Введите ответ:</label>
+                        <input id="a1" type="number" inputmode="numeric"
+                               placeholder="Количество символов">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="hint">
+                        Подсказка: сравните количество бит на один символ
+                        в двух кодировках.
+                    </td>
+                </tr>
+            </table>
+
+            <div class="actions">
+                <button id="checkButton" type="button">Проверить ответ</button>
+                <button id="resetButton" class="button-secondary" type="button">Сбросить</button>
+            </div>
+
+            <p id="questionFeedback" class="feedback" aria-live="polite"></p>
+            <div class="score-panel">
+                <span>Правильных ответов:</span>
+                <strong><span id="score">0</span> / 1</strong>
+            </div>
+        </section>
+
+        <section class="card">
+            <p class="eyebrow">Дополнительное задание</p>
+            <h2>Угадай число</h2>
+            <p>
+                Компьютер загадает число от 1 до 100. Вводите числа в появляющемся
+                окне — программа подскажет, больше или меньше загаданное число.
+            </p>
+            <button id="guessButton" type="button">Начать игру</button>
+            <p id="guessFeedback" class="feedback" aria-live="polite">
+                Игра ещё не запускалась.
+            </p>
+        </section>
+
+        <section class="card compact-card">
+            <p class="eyebrow">Работа с массивами и случайными числами</p>
+            <h2>Генерация массива</h2>
+            <p>Пример массива из пяти случайных чисел от 1 до 100:</p>
+            <div id="randomArray" class="array-output" aria-live="polite">Нажмите кнопку</div>
+            <button id="arrayButton" class="button-secondary" type="button">
+                Сгенерировать массив
+            </button>
+        </section>
+
+    </main>
+</body>
+</html>
