@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript — первые программы</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            color: #222;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #273c75;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: #273c75;
+            margin-top: 0;
+        }
+
+        button {
+            background: #273c75;
+            color: white;
+            border: none;
+            padding: 11px 17px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px 5px 5px 0;
+        }
+
+        button:hover {
+            background: #40739e;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 5px 5px 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .result {
+            margin-top: 12px;
+            padding: 12px;
+            background: #f1f3f6;
+            border-radius: 6px;
+            min-height: 20px;
+            white-space: pre-line;
+        }
+
+        .comparison {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JavaScript: первые программы</h1>
+    <p class="description">
+        Практическая работа по изучению JavaScript
+        с элементами сравнения с C#
+    </p>
+
+    <section class="card">
+        <h2>1. Вывод информации</h2>
+        <p>Вывод текста и информации о студенте в консоль.</p>
+        <button onclick="showInformation()">Запустить программу</button>
+        <div class="result" id="informationResult"></div>
+
+        <p class="comparison">
+            JavaScript: console.log("Привет, мир!");<br>
+            C#: Console.WriteLine("Привет, мир!");
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>2. Переменные и ввод данных</h2>
+        <p>Ввод имени и возраста пользователя.</p>
+        <button onclick="enterUserData()">Ввести данные</button>
+        <div class="result" id="userResult"></div>
+
+        <p class="comparison">
+            В JavaScript используется let, а в C# —
+            объявление типа переменной, например string или int.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>3. Условия</h2>
+        <p>Определение возрастной категории пользователя.</p>
+        <button onclick="checkAge()">Проверить возраст</button>
+        <div class="result" id="ageResult"></div>
+
+        <p class="comparison">
+            Конструкция if/else в JavaScript и C# практически идентична.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>4. Циклы</h2>
+        <p>Вывод чисел от 1 до указанного значения и отдельно чётных чисел.</p>
+        <button onclick="runLoop()">Запустить цикл</button>
+        <div class="result" id="loopResult"></div>
+    </section>
+
+    <section class="card">
+        <h2>5. Функции</h2>
+        <p>Проверка числа на чётность с помощью функции isEven().</p>
+
+        <input type="number" id="evenNumber" placeholder="Введите число">
+        <button onclick="checkEven()">Проверить</button>
+
+        <div class="result" id="evenResult"></div>
+    </section>
+
+    <section class="card">
+        <h2>6. Строгое равенство</h2>
+        <p>Сравнение операторов == и ===.</p>
+        <button onclick="compareEquality()">Показать сравнение</button>
+        <div class="result" id="equalityResult"></div>
+    </section>
+
+    <section class="card">
+        <h2>7. Домашнее задание: калькулятор</h2>
+
+        <input type="number" id="number1" placeholder="Первое число">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">−</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+        </select>
+        <input type="number" id="number2" placeholder="Второе число">
+
+        <button onclick="calculate()">Вычислить</button>
+
+        <div class="result" id="calculatorResult"></div>
+    </section>
+
+    <section class="card">
+        <h2>8. Домашнее задание: таблица умножения</h2>
+
+        <input type="number" id="multiplicationNumber"
+               placeholder="Введите число">
+
+        <button onclick="multiplicationTable()">Показать таблицу</button>
+
+        <div class="result" id="multiplicationResult"></div>
+    </section>
+
+    <section class="card">
+        <h2>9. Домашнее задание: сумма чисел</h2>
+
+        <input type="number" id="sumNumber" placeholder="Введите число">
+
+        <button onclick="calculateSum()">Посчитать сумму</button>
+
+        <div class="result" id="sumResult"></div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
